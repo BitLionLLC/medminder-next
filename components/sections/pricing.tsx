@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/reveal";
 import { Glass, SectionHeading, StoreButtons } from "@/components/ui";
+import { adFreePrice } from "@/lib/site";
 
 const free = [
   "Unlimited medications",
@@ -62,11 +63,9 @@ export function Pricing() {
                 </span>
               </div>
               <p className="mt-4 font-[family-name:var(--font-jakarta)] text-5xl font-extrabold tracking-tight">
-                One purchase
+                {adFreePrice}
               </p>
-              <p className="text-soft mt-2 text-sm">
-                Priced at launch — a few dollars, paid once
-              </p>
+              <p className="text-soft mt-2 text-sm">Paid once, not every month</p>
               <ul className="mt-7 space-y-3">
                 {paid.map((line) => (
                   <Line key={line}>{line}</Line>

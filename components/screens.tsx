@@ -327,7 +327,7 @@ export function AdherenceScreen({ tone = "light" }: { tone?: "light" | "dark" })
         <ScreenGlass tone={tone} className="divide-y divide-current/10">
           <Row label="Appearance" value="System" />
           <Row label="Account" value="grant@…" />
-          <Row label="Remove ads" value="One-time" accent />
+          <Row label="Remove ads" value="$0.99" accent />
         </ScreenGlass>
       </div>
       <ScreenNavBar tone={tone} active="settings" />

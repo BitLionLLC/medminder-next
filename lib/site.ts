@@ -15,7 +15,14 @@ export const site = {
   appStoreUrl: "", // TODO: https://apps.apple.com/app/id…
   playStoreUrl: "", // TODO: https://play.google.com/store/apps/details?id=com.thebitlion.medminder
   bundleId: "com.thebitlion.medminder",
+
+  /** The one-time in-app purchase that removes the banner ad, in USD. */
+  adFreePrice: 0.99,
+  adFreeProductId: "medminder.removeAds",
 } as const;
+
+/** The price as it is written on the page. */
+export const adFreePrice = `$${site.adFreePrice.toFixed(2)}`;
 
 /** Subject line pre-filled on the "tell me when it launches" link. */
 export const notifyMailto =
@@ -28,7 +35,7 @@ export const notifyMailto =
 export const faqs = [
   {
     q: "Is Med Minder free?",
-    a: "Yes. Every feature — unlimited medications, unlimited reminders, the dose log, sync across devices — is free, supported by a small banner ad at the bottom of the screen. One optional in-app purchase removes the banner forever. There is no subscription and nothing is held back behind it.",
+    a: "Yes. Every feature — unlimited medications, unlimited reminders, the dose log, sync across devices — is free, supported by a small banner ad at the bottom of the screen. One optional $0.99 purchase removes the banner forever. There is no subscription and nothing is held back behind it.",
   },
   {
     q: "Do reminders work without a connection?",

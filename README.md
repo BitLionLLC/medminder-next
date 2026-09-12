@@ -57,8 +57,6 @@ card all read the same flag.
 
 Also worth doing at that point:
 
-- [ ] Confirm the ad-removal price in `components/sections/pricing.tsx`, which
-      currently says "a few dollars, paid once" rather than a number.
 - [ ] Have the privacy policy and terms in `app/privacy/page.tsx` reviewed. They
       describe what the app actually does — Clerk for accounts, Convex for sync,
       AdMob for the banner, RevenueCat for the purchase — but they were not

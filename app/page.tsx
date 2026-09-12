@@ -23,13 +23,23 @@ const jsonLd = {
       url: site.url,
       author: { "@type": "Organization", name: site.developer },
       description:
-        "A medication tracker with reminders that are scheduled on the device, so they arrive on time without a connection. Free, with a one-time in-app purchase to remove ads.",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free download, ad-supported, with a one-time purchase to remove ads.",
-      },
+        "A medication tracker with reminders that are scheduled on the device, so they arrive on time without a connection. Free, with a one-time $0.99 in-app purchase to remove ads.",
+      offers: [
+        {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          description: "Free download. Every feature, supported by one banner ad.",
+        },
+        {
+          "@type": "Offer",
+          name: "Remove ads",
+          price: site.adFreePrice.toFixed(2),
+          priceCurrency: "USD",
+          category: "In-app purchase",
+          description: "A one-time purchase that removes the banner ad permanently.",
+        },
+      ],
     },
     {
       "@type": "FAQPage",

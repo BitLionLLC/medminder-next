@@ -30,7 +30,7 @@ export function Hero() {
           <Glass className="flex flex-wrap items-center gap-x-7 gap-y-3 px-5 py-4 text-sm">
             <Fact value="Free" label="Every feature" />
             <Divider />
-            <Fact value="No subscription" label="One-off ad removal" />
+            <Fact value="No subscription" label="$0.99 removes the ad" />
             <Divider />
             <Fact value="Offline" label="Reminders still fire" />
           </Glass>
