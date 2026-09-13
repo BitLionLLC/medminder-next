@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { bitlion } from "@/lib/apps";
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -31,7 +32,7 @@ export function SiteFooter() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-x-10 gap-y-6 text-sm sm:grid-cols-4 sm:gap-y-3">
               <FooterCol title="App">
                 <FooterLink href="/#how">How it works</FooterLink>
                 <FooterLink href="/#features">Features</FooterLink>
@@ -48,11 +49,26 @@ export function SiteFooter() {
                 <FooterLink href="/privacy">Privacy policy</FooterLink>
                 <FooterLink href="/privacy#terms">Terms of use</FooterLink>
               </FooterCol>
+              <FooterCol title="BitLion">
+                <FooterLink href="/apps">Our other apps</FooterLink>
+                <FooterLink href={bitlion.url} external>
+                  All links
+                </FooterLink>
+              </FooterCol>
             </div>
           </div>
 
           <p className="text-soft mt-10 text-xs">
-            © {new Date().getFullYear()} {site.developer}. Apple, the Apple logo,
+            © {new Date().getFullYear()}{" "}
+            <a
+              href={bitlion.siteUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-[color:var(--text)] hover:underline"
+            >
+              {site.developer}
+            </a>
+            . Apple, the Apple logo,
             iPhone and App Store are trademarks of Apple Inc. Google Play and the
             Google Play logo are trademarks of Google LLC.
           </p>
