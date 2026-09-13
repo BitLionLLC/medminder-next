@@ -16,6 +16,9 @@ export const site = {
   playStoreUrl: "", // TODO: https://play.google.com/store/apps/details?id=com.thebitlion.medminder
   bundleId: "com.thebitlion.medminder",
 
+  /** Google Analytics 4 measurement ID for getmedminder.app. */
+  gaMeasurementId: "G-R0HCVCDZFB",
+
   /** The one-time in-app purchase that removes the banner ad, in USD. */
   adFreePrice: 0.99,
   adFreeProductId: "medminder.removeAds",
