@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@/components/analytics";
+import { socialMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -23,8 +24,14 @@ const description =
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  ...socialMetadata({
+    path: "/",
+    title,
+    description,
+    shareDescription:
+      "A reminder at every scheduled time, scheduled on the device so it fires with no connection. Tap once to log the dose. Free on iPhone and Android.",
+  }),
   title: { default: title, template: `%s · ${site.name}` },
-  description,
   applicationName: site.name,
   keywords: [
     "medication reminder app",
@@ -36,21 +43,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: site.developer }],
   creator: site.developer,
-  openGraph: {
-    type: "website",
-    url: site.url,
-    siteName: site.name,
-    title,
-    description:
-      "A reminder at every scheduled time, scheduled on the device so it fires with no connection. Tap once to log the dose. Free on iPhone and Android.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description:
-      "Medication reminders that arrive on time, offline. Tap once to log the dose. Free on iPhone and Android.",
-  },
-  alternates: { canonical: "/" },
+  publisher: site.developer,
 };
 
 export const viewport: Viewport = {

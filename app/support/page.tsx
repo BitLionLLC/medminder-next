@@ -4,13 +4,16 @@ import { Aurora } from "@/components/aurora";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Glass, Pill } from "@/components/ui";
+import { socialMetadata } from "@/lib/metadata";
 import { faqs, site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = socialMetadata({
+  path: "/support",
   title: "Support",
   description: `Help with ${site.name} — reminders, schedules, sync, purchases and account deletion. Or email us and get a person.`,
-  alternates: { canonical: "/support" },
-};
+  shareDescription:
+    "Reminders, schedules, sync, purchases and account deletion — the answers to the common ones. Or email us and get a person.",
+});
 
 const topics = [
   {

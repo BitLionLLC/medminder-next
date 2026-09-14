@@ -1,8 +1,8 @@
 import { type Card, ogAlt, ogCard, ogContentType, ogSize } from "@/lib/og";
 
 const card: Card = {
-  headline: ["Never miss a dose.", "Even off the grid."],
-  chips: ["Free · no subscription", "Reminders work offline", "iPhone · Android"],
+  headline: ["Stuck on something?", "Get a person."],
+  chips: ["Email support", "Answers to the common ones", "No ticket queue"],
 };
 
 export const alt = ogAlt(card);

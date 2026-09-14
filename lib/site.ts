@@ -2,7 +2,11 @@ export const site = {
   name: "Med Minder",
   tagline: "Never miss a dose",
   developer: "BitLion, LLC",
-  url: "https://getmedminder.app",
+  /* The canonical host, and the one every absolute URL in the page metadata is
+     built from. It must be the host that answers with a 200 — Netlify serves
+     www as primary and 301s the apex to it, and LinkedIn will not follow a
+     redirect on og:image, so pointing this at the apex costs the link preview. */
+  url: "https://www.getmedminder.app",
   supportEmail: "grant@thebitlion.com",
   category: "Medical",
   ageRating: "4+",

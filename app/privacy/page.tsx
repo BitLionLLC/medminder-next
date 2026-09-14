@@ -4,13 +4,16 @@ import { Aurora } from "@/components/aurora";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Pill } from "@/components/ui";
+import { socialMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = socialMetadata({
+  path: "/privacy",
   title: "Privacy policy and terms",
   description: `What ${site.name} collects, what it does not, and the terms you use it under.`,
-  alternates: { canonical: "/privacy" },
-};
+  shareDescription:
+    "Stay signed out and nothing leaves the phone. Nothing is ever sold, and you can delete your account and everything in it from inside the app.",
+});
 
 /* Update when the wording changes, not on every deploy — App Store review reads
    this date. */

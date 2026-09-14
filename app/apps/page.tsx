@@ -11,13 +11,15 @@ import {
   type CatalogEntry,
   type CatalogGroup,
 } from "@/lib/apps";
+import { socialMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = socialMetadata({
+  path: "/apps",
   title: "Our other apps",
   description: `The rest of what ${site.developer} makes — apps, browser extensions and web tools, including the ones that have not shipped yet.`,
-  alternates: { canonical: "/apps" },
-};
+  shareDescription: `The rest of what ${site.developer} makes — apps, browser extensions and web tools, including the ones that have not shipped yet.`,
+});
 
 export default async function AppsPage() {
   const groups = await getOtherApps();
